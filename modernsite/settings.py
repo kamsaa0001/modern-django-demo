@@ -3,15 +3,20 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+# =====================
 # SECURITY
+# =====================
+
 SECRET_KEY = 'django-insecure-change-this-key'
 DEBUG = False
 
 ALLOWED_HOSTS = ['.onrender.com']
 
 
+# =====================
 # APPLICATIONS
+# =====================
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -24,10 +29,13 @@ INSTALLED_APPS = [
 ]
 
 
+# =====================
 # MIDDLEWARE
+# =====================
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # WhiteNoise
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -59,7 +67,10 @@ TEMPLATES = [
 WSGI_APPLICATION = 'modernsite.wsgi.application'
 
 
-# DATABASE (SQLite for Render free tier)
+# =====================
+# DATABASE
+# =====================
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -68,7 +79,10 @@ DATABASES = {
 }
 
 
+# =====================
 # PASSWORD VALIDATION
+# =====================
+
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
     {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
@@ -77,16 +91,19 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+# =====================
 # INTERNATIONALIZATION
+# =====================
+
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
 
-# =========================
-# STATIC FILES (IMPORTANT)
-# =========================
+# =====================
+# STATIC FILES
+# =====================
 
 STATIC_URL = '/static/'
 
@@ -99,13 +116,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
-# =========================
+# =====================
 # MEDIA FILES
-# =========================
+# =====================
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-# DEFAULT PRIMARY KEY
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
