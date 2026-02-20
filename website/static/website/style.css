@@ -1,21 +1,34 @@
-* {margin:0;padding:0;box-sizing:border-box;}
-body {
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
     font-family:'Poppins',sans-serif;
     background:#0f2027;
     color:white;
+    line-height:1.6;
 }
-nav {
+
+/* NAVBAR */
+nav{
     display:flex;
     justify-content:space-between;
+    align-items:center;
     padding:20px 60px;
     background:rgba(0,0,0,0.6);
     position:sticky;
     top:0;
+    z-index:1000;
 }
-nav a {color:white;margin-left:20px;text-decoration:none;}
-nav a:hover {color:#00ffd5;}
+nav h1{color:#00ffd5;}
+nav a{
+    color:white;
+    margin-left:25px;
+    text-decoration:none;
+    font-weight:500;
+}
+nav a:hover{color:#00ffd5;}
 
-.hero {
+/* HERO */
+.hero{
     height:100vh;
     display:flex;
     flex-direction:column;
@@ -23,98 +36,165 @@ nav a:hover {color:#00ffd5;}
     align-items:center;
     text-align:center;
     background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    padding:0 20px;
 }
-.hero h1 {font-size:50px;margin-bottom:20px;}
-.typing {color:#00ffd5;}
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+.typing{color:#00ffd5;}
+.hero p{
+    max-width:600px;
+    opacity:0.85;
+    margin-bottom:25px;
+}
 
-.btn {
-    padding:14px 30px;
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* BUTTONS */
+.btn{
+    padding:14px 32px;
     background:#00ffd5;
     color:black;
     border-radius:30px;
     text-decoration:none;
     font-weight:bold;
+    transition:0.3s;
 }
-.secondary {
+.btn:hover{
+    transform:scale(1.05);
+}
+.secondary{
     background:transparent;
     border:2px solid #00ffd5;
     color:#00ffd5;
 }
-
-.stats {
-    display:flex;
-    justify-content:center;
-    gap:80px;
-    padding:80px;
-    background:#111;
+.secondary:hover{
+    background:#00ffd5;
+    color:black;
 }
-.stat-box h2 {color:#00ffd5;font-size:40px;}
 
-.services {
-    padding:100px;
+/* SERVICES */
+.services{
+    padding:100px 10%;
     text-align:center;
 }
-.card {
+.service-box{
+    margin-top:40px;
+}
+.card{
     background:#1e293b;
     padding:30px;
     border-radius:15px;
-    margin:20px;
+    margin:15px;
     display:inline-block;
+    width:260px;
+    transition:0.3s;
+}
+.card:hover{
+    transform:translateY(-10px);
 }
 
-.projects {
-    padding:100px;
+/* PROJECTS */
+.projects{
+    padding:100px 10%;
     background:#f8f9fc;
     color:black;
     text-align:center;
 }
-.project-card {
+.project-card{
     background:white;
-    padding:20px;
+    padding:35px;
     border-radius:15px;
-    margin:20px;
-    display:inline-block;
-    width:280px;
+    max-width:650px;
+    margin:40px auto;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+.project-card h3{
+    margin-bottom:15px;
+}
+.project-card p{
+    margin-bottom:15px;
 }
 
-.testimonials {
+/* TESTIMONIAL */
+.testimonials{
     padding:80px;
     background:#0d1b2a;
     text-align:center;
 }
+.testimonial-box{
+    margin-top:25px;
+    font-style:italic;
+    opacity:0.85;
+}
 
-.cta {
+/* CTA */
+.cta{
     padding:80px;
     background:linear-gradient(45deg,#00ffd5,#00c3ff);
     color:black;
     text-align:center;
 }
+.cta h2{margin-bottom:20px;}
 
-.contact {
-    padding:100px;
+/* CONTACT */
+.contact{
+    padding:100px 10%;
     background:#f4f7fa;
     color:black;
     text-align:center;
 }
+.contact-form{
+    max-width:500px;
+    margin:30px auto;
+}
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea{
     width:100%;
-    padding:12px;
-    margin:10px 0;
+    padding:14px;
+    margin:12px 0;
     border-radius:8px;
+    border:1px solid #ccc;
+}
+.contact-form button{
+    background:#00d4aa;
+    color:white;
+    padding:14px 30px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+}
+.contact-form button:hover{
+    background:#009e82;
+}
+.success-message{
+    margin-bottom:15px;
+    font-weight:500;
 }
 
-footer {
+/* FOOTER */
+footer{
     padding:40px;
     text-align:center;
     background:#111;
+    color:#ccc;
 }
 
-.whatsapp {
+/* WHATSAPP */
+.whatsapp{
     position:fixed;
     bottom:20px;
     right:20px;
     background:#25D366;
-    padding:15px;
+    padding:16px;
     border-radius:50%;
+    font-size:20px;
+    text-decoration:none;
 }

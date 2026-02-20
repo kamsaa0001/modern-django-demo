@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <title>KSR Dev | Django Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="{% static 'website/style.css' %}">
-
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -18,34 +15,19 @@
     <div>
         <a href="#">Home</a>
         <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
+        <a href="#projects">Project</a>
         <a href="#contact">Contact</a>
     </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-    <h1>I Build <span class="typing"></span></h1>
-    <p>Professional Django Developer helping businesses grow online 🚀</p>
+    <h1>I Build <span class="typing">Modern Business Websites</span></h1>
+    <p>Professional Django developer helping startups and businesses grow online 🚀</p>
+
     <div class="hero-buttons">
         <a href="#contact" class="btn">Start Project</a>
-        <a href="#projects" class="btn secondary">View Work</a>
-    </div>
-</section>
-
-<!-- STATS -->
-<section class="stats">
-    <div class="stat-box">
-        <h2 class="counter" data-target="15">0</h2>
-        <p>Projects Completed</p>
-    </div>
-    <div class="stat-box">
-        <h2 class="counter" data-target="7">0</h2>
-        <p>Happy Clients</p>
-    </div>
-    <div class="stat-box">
-        <h2 class="counter" data-target="100">0</h2>
-        <p>Satisfaction %</p>
+        <a href="#projects" class="btn secondary">View Demo</a>
     </div>
 </section>
 
@@ -53,39 +35,45 @@
 <section class="services" id="services">
     <h2>Services</h2>
     <div class="service-box">
-        <div class="card">Business Websites</div>
-        <div class="card">Django Backend</div>
-        <div class="card">Landing Pages</div>
+        <div class="card">Business Website Development</div>
+        <div class="card">Django Backend Systems</div>
+        <div class="card">Landing Page Design</div>
     </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- PROJECT -->
 <section class="projects" id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-        {% for project in projects %}
-        <div class="project-card">
-            {% if project.image %}
-            <img src="{{ project.image.url }}">
-            {% endif %}
-            <h3>{{ project.title }}</h3>
-            <p>{{ project.description }}</p>
-        </div>
-        {% endfor %}
+    <h2>Featured Project</h2>
+
+    <div class="project-card">
+        <h3>Modern Business Website (Live Demo)</h3>
+        <p>
+            This is a fully responsive Django-powered website built to demonstrate
+            clean UI design, structured backend development, and production deployment skills.
+        </p>
+        <p>
+            ✔ Responsive Design<br>
+            ✔ Django Backend<br>
+            ✔ Contact Form Integration<br>
+            ✔ Production Deployment (Render)<br>
+            ✔ Clean and Modern UI
+        </p>
+
+        <a href="#contact" class="btn">Request Similar Website</a>
     </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- TESTIMONIAL -->
 <section class="testimonials">
-    <h2>What Clients Say</h2>
+    <h2>Client Feedback</h2>
     <div class="testimonial-box">
-        “Very professional and fast delivery.”
+        “Very professional work and smooth communication. Highly recommended.”
     </div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-    <h2>Let’s Build Something Amazing</h2>
+    <h2>Let’s Build Something Amazing Together</h2>
     <a href="#contact" class="btn">Hire Me Now</a>
 </section>
 
@@ -111,8 +99,6 @@
 </footer>
 
 <a href="https://wa.me/917425906257" class="whatsapp" target="_blank">💬</a>
-
-<script src="{% static 'website/script.js' %}"></script>
 
 </body>
 </html>
