@@ -177,9 +177,13 @@ nav a:hover{color:#00ffd5;}
 .contact-form button:hover{
     background:#009e82;
 }
-.success-message{
-    margin-bottom:15px;
-    font-weight:500;
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: 500;
 }
 
 /* FOOTER */
