@@ -94,12 +94,15 @@ nav a:hover{color:#00ffd5;}
     margin:15px;
     display:inline-block;
     width:260px;
-    transition:0.3s;
-}
-.card:hover{
-    transform:translateY(-10px);
+    transition:0.4s ease;
+    cursor:pointer;
 }
 
+.card:hover{
+    transform:translateY(-12px) scale(1.03);
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+    background:#243447;
+}
 /* PROJECTS */
 .projects{
     padding:100px 10%;
@@ -197,4 +200,26 @@ footer{
     border-radius:50%;
     font-size:20px;
     text-decoration:none;
+}
+
+@media (max-width:768px){
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .project-card{
+        width:100%;
+        padding:25px;
+    }
 }
